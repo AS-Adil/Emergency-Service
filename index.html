@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency-Services</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#F5FFF6]">
+    <header class="border-2 max-w-[1670px] mx-auto">
+ <!-- Nav section -->
+<nav class="flex justify-between items-center px-10 py-3 bg-white ">
+
+  <!-- Left: Logo + Website name -->
+  <div class="flex items-center gap-2">
+    <img src="assets/logo.png" alt="" class=" w-[50px]">
+    <span class="font-bold text-xl text-[#006747] ">Emergency <br>Service</span>
+  </div>
+
+  <!-- Right-- Heart, Coins, Copy -->
+  <div class="border-2 flex items-center gap-6 text-gray-700">
+    <!-- heart -->
+    <div class="border w-24 h-10 rounded-full bg-[#ddfae3] flex items-center justify-evenly gap-1  hover:bg-gray-500 hover:text-white">
+      <img class="w-[30px]"
+      src="assets/heart.png" alt="">
+      <span id="heartCount" class="font-bold">0</span>
+    </div>
+
+    <!-- Coin -->
+    <div class=" border w-24 h-10 rounded-full bg-[#ddfae3] flex items-center justify-evenly gap-1 hover:bg-gray-500 hover:text-white">
+      <img class="w-[24px]"
+       src="assets/coin.png" alt="">
+      <span id="coinCount" class="font-bold">100</span>
+    </div>
+
+    <!-- CopyCount -->
+    <div class="flex items-center gap-1 bg-[#00A63E]  text-white px-6 py-2 rounded-[50px] hover:bg-gray-500 font-bold">
+      <span id="copyCount" >0</span>
+      <span>Copy</span>
+    </div>
+  </div>
+
+</nav>
+ <!-- Nav end -->
+
+ <!-- hero section start -->
+
+<section class="2 border-red-500 bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] text-center  py-10">
+  <!-- hero-logo -->
+  <div class="flex justify-center mb-3">
+    <img src="assets/logo-dark.png" alt="" class="w-[92px]">
+  </div>
+
+  <!-- hero-title -->
+  <h1 class="text-3xl md:text-4xl font-bold text-white">
+    Emergency Service Directory
+  </h1>
+
+ 
+  <p class="mt-4 text-white text-lg font-semibold">
+Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
+  </p>
+</section>
+
+
+
+</header>
+ 
+<!-- header section end -->
+
+<!-- Main Section Start  -->
+
+<main class="border-2 border-red-900 max-w-[1670px] min-h-[80vh] mx-auto
+py-6 px-10 grid grid-cols-12 gap-6">
+
+
+<!-- main card section  -->
+
+<section id="card-section"
+ class="border-2 border-red-700 col-span-9">
+
+
+ <!-- card 1  -->
+
+    <!-- Single Card -->
+<div class="border rounded-2xl shadow-md p-5 bg-white flex flex-col justify-between w-full max-w-sm">
+  <!-- Top: Heart Icon -->
+  <div class="flex justify-between items-start">
+    <button class="text-red-500 text-xl hover:scale-110 transition" onclick="increaseHeart()">
+      ❤️
+    </button>
+    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Emergency</span>
+  </div>
+
+  <!-- Icon -->
+  <div class="flex justify-center my-4">
+    <img src="assets/fire-service.png" alt="Fire Service" class="w-16 h-16">
+  </div>
+
+  <!-- Service Info -->
+  <div class="text-center">
+    <h2 class="text-lg font-bold text-gray-800">অগ্নি নির্বাপণ</h2>
+    <p class="text-sm text-gray-500">Fire Service</p>
+    <p class="text-lg font-semibold text-green-600">999</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex justify-between gap-3 mt-4">
+    <!-- Copy Button -->
+    <button onclick="copyNumber('999')" 
+      class="flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 rounded-lg transition">
+      📋 Copy
+    </button>
+    <!-- Call Button -->
+    <button onclick="makeCall('Fire Service', '999')" 
+      class="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
+      📞 Call
+    </button>
+  </div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+<!-- main history section  -->
+<section id="history-section"
+ class="border-2 border-emerald-700 col-span-3"></section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
