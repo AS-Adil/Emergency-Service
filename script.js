@@ -23,38 +23,49 @@ document.getElementById('card-container').addEventListener('click', function (e)
 
 
 
-// functionality for Call buttons 
+
+// functionality for Call buttons 2 
+
 document.getElementById('card-container').addEventListener('click', function (e){
- 
-    if(e.target.className.includes('call-btn')){
-       
-        const currentCoins = Number(getById('coinCount').innerText);
+
+    let callButton = e.target.closest('.call-btn');
+
+    // console.log(callButton);
+    // console.log(e.target);
+
+   //   validations
+    if(!callButton){
+        console.log('not true');
+        return;
+    }
+
+      const currentCoins = Number(getById('coinCount').innerText);
 
         if(currentCoins < 20){
             alert(`You Don't Have Enough Coins To Make The Call`)
             return;
         }
 
-        // things to be done aftre validation 
-
         // cutting 20 coins for each call 
         const updatedCoins = currentCoins - 20;
         getById('coinCount').innerText = updatedCoins;
+ 
+        const Card = callButton.closest('.card');
+        // console.log(Card);
 
-        const serviceName = e.target.parentNode.parentNode.children[1].children[0].innerText;
-        // console.log(serviceName);
+        const serviceName = Card.querySelector('.title').innerText;
+        console.log(serviceName);
 
-        const number = e.target.parentNode.parentNode.children[2].children[0].innerText;
-        console.log(number);
+        const nUmber = Card.querySelector('.number').innerText;
+        console.log(nUmber);
 
-        alert(`${serviceName} ${number}`)
-        
-    }
+        alert(`📞 Calling ${serviceName} ${nUmber}`)
 
 
-})
+})  
+ 
+// document.querySelector
 
-  
 
 
 
