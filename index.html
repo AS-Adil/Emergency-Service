@@ -86,7 +86,7 @@
     <!-- Main Section Start  -->
 
     <main
-      class="bg-[#F5FFF6] max-w-[1670px] mx-auto py-6 px-4 sm:px-5 lg:px-10 grid grid-cols-12 gap-6"
+      class="bg-[#F5FFF6] max-w-[1670px] mx-auto py-6 px-4 sm:px-5 lg:px-10 grid grid-cols-12 gap-6 lg:gap-10"
     >
       <!-- main card container  -->
       <section
@@ -510,7 +510,7 @@
         class="col-span-12 lg:col-span-3 bg-[#FFFFFF] py-4 px-3"
       >
         <!-- History icon and Clear button  -->
-        <div class="flex justify-between">
+        <div class="flex justify-between gap-[3px]">
           <!-- history icon  -->
           <div class="flex items-center gap-2">
             <i class="fa-regular fa-clock text-xl text-gray-700"></i>
@@ -520,6 +520,7 @@
 
           <!-- history button  -->
           <button
+            id="clear-btn"
             class="bg-[#00A63E] text-white px-8 py-2 rounded-[50px] hover:bg-gray-500 font-bold cursor-pointer"
           >
             Clear
@@ -527,46 +528,18 @@
         </div>
 
         <!-- call list container start  -->
-        <div class="mt-4 flex flex-col gap-4 pt-4">
+        <div id="call-list-container" class="mt-4 flex flex-col gap-4 pt-4">
           <!-- list 1  -->
           <div
-            class="shadow-lg flex justify-between items-center bg-[#FAFAFA] py-4 rounded-xl px-3"
+            class="shadow-lg flex justify-between items-center bg-[#FAFAFA] py-4 rounded-xl px-3 gap-2"
           >
             <div>
-              <h1 class="text-lg font-semibold">Fire Service Number</h1>
-              <p class="text-[#5C5C5C]">999</p>
+              <h1 class="text-lg font-semibold">Bangladesh Railway Helpline</h1>
+              <p class="text-[#5C5C5C]">163</p>
             </div>
 
             <div>
-              <p class="font-medium text-[18px]">8:01:42 PM</p>
-            </div>
-          </div>
-
-          <!-- list 1  -->
-          <div
-            class="shadow-lg flex justify-between items-center bg-[#FAFAFA] py-4 rounded-xl px-3"
-          >
-            <div>
-              <h1 class="text-lg font-semibold">Fire Service Number</h1>
-              <p class="text-[#5C5C5C]">999</p>
-            </div>
-
-            <div>
-              <p class="font-medium text-[18px]">8:01:42 PM</p>
-            </div>
-          </div>
-
-          <!-- list 1  -->
-          <div
-            class="shadow-lg flex justify-between items-center bg-[#FAFAFA] py-4 rounded-xl px-3"
-          >
-            <div>
-              <h1 class="text-lg font-semibold">Fire Service Number</h1>
-              <p class="text-[#5C5C5C]">999</p>
-            </div>
-
-            <div>
-              <p class="font-medium text-[18px]">8:01:42 PM</p>
+              <p class="font-medium whitespace-nowrap">8:01:42 PM</p>
             </div>
           </div>
         </div>
