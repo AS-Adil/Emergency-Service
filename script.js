@@ -15,7 +15,7 @@ document
     }
   });
 
-// functionality for Call buttons 2
+// functionality for Call buttons
 
 document
   .getElementById("card-container")
@@ -27,14 +27,13 @@ document
 
     //   validations
     if (!callButton) {
-      console.log("not true");
       return;
     }
 
     const currentCoins = Number(getById("coinCount").innerText);
 
     if (currentCoins < 20) {
-      alert(`You Don't Have Enough Coins To Make The Call`);
+      alert(`❌ You Don't Have Enough Coins To Make The Call`);
       return;
     }
 
@@ -43,20 +42,16 @@ document
     getById("coinCount").innerText = updatedCoins;
 
     const Card = callButton.closest(".card");
-   
 
     const serviceName = Card.querySelector(".title").innerText;
-    
 
     const phoneNumber = Card.querySelector(".number").innerText;
-    
 
     alert(`📞 Calling ${serviceName} ${phoneNumber}`);
 
-    const time = new Date().toLocaleTimeString(); 
+    const time = new Date().toLocaleTimeString();
 
     const CallListContainer = getById("call-list-container");
-   
 
     const newCall = document.createElement("div");
     newCall.classList.add(
@@ -85,19 +80,50 @@ document
   
   `;
 
-   CallListContainer.appendChild(newCall)
-
-
-
-
-
+    CallListContainer.appendChild(newCall);
   });
 
 
-//  functionalities for clear button 
- getById('clear-btn').addEventListener('click', function(){
-
-   getById('call-list-container').innerHTML ="";
 
 
- });
+
+
+
+
+
+//------functionalaties for copy button ---
+getById("card-container").addEventListener("click", async function (e) {
+  const copyButton = e.target.closest(".copy-btn");
+  //  validation
+  if (!copyButton) {
+    return;
+  }
+
+  const Card = copyButton.closest(".card");
+  const nUmber = Card.querySelector(".number").innerText;
+
+  await navigator.clipboard.writeText(nUmber);
+
+  alert(`☎️ Number copied : ${nUmber}`);
+
+  // updating copy count
+  const currentCopy = Number(getById("copyCount").innerText);
+  const updatedCopy = currentCopy + 1;
+  getById("copyCount").innerText = updatedCopy;
+});
+
+
+
+
+
+
+
+
+
+
+//  functionalities for clear button
+getById("clear-btn").addEventListener("click", function () {
+  getById("call-list-container").innerHTML = "";
+});
+
+
