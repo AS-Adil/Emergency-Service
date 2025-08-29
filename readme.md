@@ -1,6 +1,8 @@
 ### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
--  Answer:- getElementByID() find element by its id
+-  Answer:- The difference is
+
+            getElementByID() find element by its id
 
             getElementsByClassName() find all element that matches the given class (returns HTMLCollection)
 
