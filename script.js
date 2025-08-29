@@ -4,7 +4,7 @@ function getById(id) {
   return element;
 }
 
-// updating hear count
+// updating heart count
 document
   .getElementById("card-container")
   .addEventListener("click", function (e) {
@@ -15,8 +15,10 @@ document
     }
   });
 
-// functionality for Call buttons
 
+
+
+// functionality for Call buttons
 document
   .getElementById("card-container")
   .addEventListener("click", function (e) {
@@ -86,14 +88,10 @@ document
 
 
 
-
-
-
-
-
 //------functionalaties for copy button ---
 getById("card-container").addEventListener("click", async function (e) {
   const copyButton = e.target.closest(".copy-btn");
+
   //  validation
   if (!copyButton) {
     return;
@@ -114,16 +112,8 @@ getById("card-container").addEventListener("click", async function (e) {
 
 
 
-
-
-
-
-
-
-
 //  functionalities for clear button
 getById("clear-btn").addEventListener("click", function () {
   getById("call-list-container").innerHTML = "";
+  
 });
-
-
