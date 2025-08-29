@@ -2,7 +2,7 @@
 
 -  Answer:- The difference is
 
-            getElementByID() find element by its id
+            getElementByID() find element by element's id
 
             getElementsByClassName() find all element that matches the given class (returns HTMLCollection)
 
